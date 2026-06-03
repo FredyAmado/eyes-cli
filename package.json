@@ -1,0 +1,13 @@
+{
+  "name": "eyes-cli",
+  "version": "1.0.0",
+  "description": "Describe images using OpenRouter vision models",
+  "type": "module",
+  "bin": {
+    "eyes": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "license": "MIT"
+}
