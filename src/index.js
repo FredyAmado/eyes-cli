@@ -90,7 +90,7 @@ async function tryModel(model) {
   const data = await res.json();
   if (data.error) {
     const msg = data.error.message || "";
-    const isRateLimit = msg.includes("Rate limit") || msg.includes("Insufficient") || msg.includes("429");
+    const isRateLimit = msg.includes("Rate limit") || msg.includes("Insufficient") || msg.includes("429") || msg.includes("No endpoints found");
     return { ok: false, rateLimited: isRateLimit, raw: data };
   }
   return { ok: true, text: data.choices?.[0]?.message?.content || "" };
